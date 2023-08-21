@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">passthevalue</string>
+    <string name="vaccine_form">Vaccine Form</string>
+    <string name="fill_in_the_vaccine_form">Fill in the Vaccine Form</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="choose_vaccine">Choose Vaccine:</string>
+    <string name="confirm">Confirm</string>
+    <string name="detail_form">Detail Form</string>
+    <string name="save">Save</string>
+</resources>

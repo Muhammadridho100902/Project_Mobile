@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vaccine</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">Or</string>
+    <string name="are_you_ready">Are You Ready?</string>
+    <string name="select">Choose The Location</string>
+</resources>

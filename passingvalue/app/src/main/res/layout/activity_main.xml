@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_marginTop="120dp">
+
+        <EditText
+            android:id="@+id/text_input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            android:backgroundTint="@color/white"
+            tools:targetApi="lollipop" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_below="@id/textinputname"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/text_input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="email"
+            android:backgroundTint="@color/white"
+            tools:targetApi="lollipop" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_vaccine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textinputemail">
+
+        <RadioButton
+            android:id="@+id/variant_astra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textinputemail"
+            android:layout_marginTop="10dp"
+            android:text="Astrazeneca"
+            />
+        <RadioButton
+            android:id="@+id/variant_moderna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/variant_astra"
+            android:text="Moderna"
+            />
+        <RadioButton
+            android:id="@+id/variant_sinovac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/variant_moderna"
+            android:text="Sinovac"
+            />
+        <RadioButton
+            android:id="@+id/variant_sinopharm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/variant_sinovac"
+            android:text="Sinopharm"
+            />
+
+
+    </RadioGroup>
+    
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/radio_vaccine"
+        android:text="confirm"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:backgroundTint="#93EA48"
+        app:cornerRadius="20dp"
+        android:textSize="20sp"
+        android:textAlignment="center" />
+
+</RelativeLayout>

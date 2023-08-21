@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/form"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <TextView
+        android:id="@+id/titled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="Vaccine Form"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/child_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titled"
+        android:layout_marginLeft="10dp"
+        android:text="Fill in the Vaccine Form"
+        android:textColor="#FCFCFC"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_below="@id/titled"
+        android:layout_marginTop="75dp">
+
+        <EditText
+            android:id="@+id/textinputname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:backgroundTint="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_below="@id/text_input_name"
+        android:layout_marginTop="10px">
+
+        <EditText
+            android:id="@+id/textinputemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/choose_vaccine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_input_email"
+        android:layout_marginTop="10dp"
+        android:text="Choose Vaccine: "
+        >
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/radio_vaccine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choose_vaccine"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/variant_astra"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_vaccine"
+            android:layout_marginTop="10dp"
+            android:text="Astrazeneca"
+            />
+
+        <RadioButton
+            android:id="@+id/variant_moderna"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_vaccine"
+            android:layout_marginTop="10dp"
+            android:text="Moderna" />
+
+        <RadioButton
+            android:id="@+id/variant_sinovac"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_vaccine"
+            android:layout_marginTop="10dp"
+            android:text="Sinovac" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_vaccine"
+        android:layout_marginTop="10dp"
+        android:text="Vaccine Location"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location">
+
+        <RadioButton
+            android:id="@+id/loc_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_vaccine"
+            android:layout_marginTop="10dp"
+            android:text="Kelurahan Ciberuk (Bogor)"
+            />
+        <RadioButton
+            android:id="@+id/loc_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/variant_astra"
+            android:text="Puskesmas Alur (Depok)"
+            />
+        <RadioButton
+            android:id="@+id/loc_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/variant_moderna"
+            android:text="Mall Antam (Bekasi)"
+            />
+        <RadioButton
+            android:id="@+id/loc_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/variant_sinovac"
+            android:text="Tugas Monas (Jakarta)"
+            />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/radio_location"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:backgroundTint="#93EA48"
+        app:cornerRadius="20dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:onClick="confirmbtn"/>
+
+</RelativeLayout>
